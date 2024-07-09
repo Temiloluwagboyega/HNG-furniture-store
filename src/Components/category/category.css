@@ -1,0 +1,21 @@
+.category-cont{
+    padding: 50px;
+    background: var(--Foundation-Primary-primary-100, #B1C2BE);
+
+}
+.category-cont h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.category-card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.category-card img{
+    width: 20rem;
+}
+.category-card p{
+    text-align: center;
+}
