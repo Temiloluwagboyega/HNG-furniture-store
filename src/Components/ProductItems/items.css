@@ -11,6 +11,7 @@
     background: white;
     border-radius: 10px;
     box-shadow: 2px 2px 13px rgb(138, 137, 137);
+    transition: 500ms;
 }
 .Items img{
     width: 100%;

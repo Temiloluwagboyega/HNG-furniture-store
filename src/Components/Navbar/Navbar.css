@@ -35,10 +35,10 @@
   transition: 500ms;
   position: fixed;
   z-index: 90;
-  top: 10%;
+  top: 5%;
   left: 0;
   background: white;
-  padding: 20px 30px;
+  padding: 50px 30px;
   width: 10rem;
   height: 100vh;
   box-shadow: 2px 2px 13px rgb(19, 18, 18);
