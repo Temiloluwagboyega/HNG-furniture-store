@@ -7,11 +7,11 @@ import Cart from './Pages/Cart'
 import Product from './Pages/Productdetail'
 import Checkout from './Pages/Checkout'
 import Footer from './Components/footer/footer'
-// import { ShopContextProvider } from "./context/shop-context";
+import { ShopContextProvider } from "./context/shop-context";
 function App(){
     return(
         <div > 
-           {/* <ShopContextProvider> */}
+           <ShopContextProvider>
            <Navbar/>
             <Routes> 
                 <Route path='/' element={<Home/>} />
@@ -20,7 +20,7 @@ function App(){
                 <Route path='/checkout' element={<Checkout/>} />
             </Routes>
             <Footer/>
-           {/* </ShopContextProvider> */}
+           </ShopContextProvider>
         </div>
     )
 }

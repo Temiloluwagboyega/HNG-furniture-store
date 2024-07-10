@@ -5,6 +5,7 @@ import user from "../assets/user.svg";
 import cart from "../assets/shopping-cart.svg";
 import "./Navbar.css";
 import "../assets/css/all.min.css";
+import {FacebookLogo} from 'phosphor-react'
 // import '../assets/css/min.css'
 
 export const Navbar = () => {

@@ -15,21 +15,21 @@ export const PRODUCTS = [
     },
     {
         id : 2,
-        productName: 'Industrial Bed',
+        productName: 'Executive Bed',
         price: 300.0,
         productImage: prod2,
         description: 'Organic Cotton, fairtrades certified'
     },
     {
         id : 3,
-        productName: 'Industrial Bed',
+        productName: 'Pillow Set',
         price: 300.0,
         productImage: prod3,
         description: 'Organic Cotton, fairtrades certified'
     },
     {
         id : 4,
-        productName: 'Industrial Bed',
+        productName: 'Modern Beed',
         price: 300.0,
         productImage: prod4,
         description: 'Organic Cotton, fairtrades certified'
