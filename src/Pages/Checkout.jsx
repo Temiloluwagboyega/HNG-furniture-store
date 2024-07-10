@@ -51,7 +51,7 @@
 //           valid cvard.
 //         </p>
 //         <div className="payment-form">
-        
+
 //             <div className="input">
 //               <label htmlFor="cname">Card Name</label>
 //               <input type="text" id="cname" placeholder="Enter your Name" />
@@ -89,91 +89,75 @@
 //            <button className="pay-btn">Pay Now</button>
 //            <button className="cancel-btn">Cancel</button>
 //            </div>
-    
+
 //         </div>
 //       </div>
 //     </div>
 //   );
 // }
 
+import React, { useContext, useState } from "react";
 
-
-
-
-import React, {useContext, useState} from 'react'
-
-import { PRODUCTS } from '../product'
-import ShopContext from '../context/shop-context';
-import { CartItem } from '../Components/cartItem/cartItem';
-import './css/checkout.css'
+import { PRODUCTS } from "../product";
+import ShopContext from "../context/shop-context";
+import { CartItem } from "../Components/cartItem/cartItem";
+import "./css/checkout.css";
 // import Product from '../Components/ProductItems/product'
 // const [cartItems, setCartItems] = useState(getDefaultCart());
 
 export default function Checkout() {
-  const{cartItems} = useContext(ShopContext)
+  const { cartItems } = useContext(ShopContext);
   return (
     <div className="checkout-cont">
-          <div className="summary-order">
-            <h1>Summary Order</h1>
-            <p>
-              Check your items to confirm that all orders are correct and your
-              shipping experience for have a better experience
-            </p>
-    {PRODUCTS.map((product) => {
-      if (cartItems[product.id] !== 0){
-        return <CartItem data = {product}/>
-      }
-    })}
-    </div>
-          <div className="payment-section">
-        <h1>Final step, make the <br /> payment.</h1>
+      <div className="summary-order">
+        <h1>Summary Order</h1>
+        <p>
+          Check your items to confirm that all orders are correct and your
+          shipping experience for have a better experience
+        </p>
+        {PRODUCTS.map((product) => {
+          if (cartItems[product.id] !== 0) {
+            return <CartItem data={product} />;
+          }
+        })}
+      </div>
+      <div className="payment-section">
+        <h1>
+          Final step, make the <br /> payment.
+        </h1>
         <p>
           To finalize your subscription, kindly complete your payment using a
           valid cvard.
         </p>
         <div className="payment-form">
-        
+          <div className="input">
+            <label htmlFor="cname">Card Name</label>
+            <input type="text" id="cname" placeholder="Enter your Name" />
+          </div>
+          <div className="input">
+            <label htmlFor="cnum">Card Number</label>
+            <input type="text" id="cnum" placeholder="Enter your card Number" />
+          </div>
+          <div className="d-input">
             <div className="input">
-              <label htmlFor="cname">Card Name</label>
-              <input type="text" id="cname" placeholder="Enter your Name" />
-            </div>
-            <div className="input">
-              <label htmlFor="cnum">Card Number</label>
-              <input
-                type="text"
-                id="cnum"
-                placeholder="Enter your card Number"
-              />
-            </div>
-            <div className="d-input">
-              <div className="input">
               <label htmlFor="edate">Exp Date</label>
-              <input
-                type="text"
-                id="edate"
-                placeholder="19/09"
-              />
-              </div>
-              <div className="input">
-              <label htmlFor="cvc">CVC</label>
-              <input
-                type="text"
-                id="cvc"
-              />
-              </div>
+              <input type="text" id="edate" placeholder="19/09" />
             </div>
             <div className="input">
-              <label htmlFor="dcode">Discount Code</label>
-              <input type="text" />
+              <label htmlFor="cvc">CVC</label>
+              <input type="text" id="cvc" />
             </div>
-           <div className="form-btn">
-           <button className="pay-btn">Pay Now</button>
-           <button className="cancel-btn">Cancel</button>
-           </div>
-    
+          </div>
+          <div className="input">
+            <label htmlFor="dcode">Discount Code</label>
+            <input type="text" />
+          </div>
+          <div className="form-btn">
+            <button className="pay-btn">Pay Now</button>
+            <button className="cancel-btn">Cancel</button>
+          </div>
         </div>
       </div>
     </div>
-  
-  )
+  );
 }

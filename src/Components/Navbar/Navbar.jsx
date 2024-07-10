@@ -5,7 +5,7 @@ import user from "../assets/user.svg";
 import cart from "../assets/shopping-cart.svg";
 import "./Navbar.css";
 import "../assets/css/all.min.css";
-import {FacebookLogo} from 'phosphor-react'
+import { FacebookLogo } from "phosphor-react";
 // import '../assets/css/min.css'
 
 export const Navbar = () => {
@@ -80,18 +80,18 @@ export const Navbar = () => {
           </div>
           <div className="mobile-nav">
             <div className="icon-mobile">
-            <i
-              className="fa fa-bars"
-              onClick={toggleMenu}
-              style={{ marginTop: "-0px", marginRight:'20px' }}
-            ></i>
-            <Link
-              to="/checkout"
-              style={{ textDecoration: "none", color: "#1E1E1E" }}
-              id="cart"
-            >
-              <img src={cart} alt="" />
-            </Link>
+              <i
+                className="fa fa-bars"
+                onClick={toggleMenu}
+                style={{ marginTop: "-0px", marginRight: "20px" }}
+              ></i>
+              <Link
+                to="/checkout"
+                style={{ textDecoration: "none", color: "#1E1E1E" }}
+                id="cart"
+              >
+                <img src={cart} alt="" />
+              </Link>
             </div>
           </div>
         </div>
