@@ -12,9 +12,6 @@ import {ShopContext} from '../../context/shop-context'
 
 export const Navbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { id, productName, price, productImage, description } = props.data;
-  const { addToCart, cartItems } = useContext(ShopContext);
-  const cartItemAmount = cartItems[id]
   const toggleMenu = () => {
     setIsOpen((open) => !open);
   };
@@ -74,7 +71,7 @@ export const Navbar = (props) => {
               >
                 <p>Cart</p>{" "}
                 <span>
-                <ShoppingCart size={20}/> {cartItemAmount > 0 && <sup> {cartItemAmount}  </sup>} 
+                <ShoppingCart size={20}/>
                 </span>
               </Link>
             </div>

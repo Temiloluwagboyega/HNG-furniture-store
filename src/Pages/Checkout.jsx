@@ -126,9 +126,9 @@ export default function Checkout() {
               return <CartItem data={product} />;
             }
           })}
-
+  <br />
           <div className="total">
-            <p>Subtotal : ${totalAmount} </p>
+            <h1>Subtotal : ${totalAmount} </h1>
           </div>
         </div>
         <div className="payment-section">
