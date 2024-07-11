@@ -6,8 +6,6 @@
 }
 .summary-order {
   width: 100%;
-  display: grid;
-  gap: 20px;
 }
 .ordered-item {
   display: flex;
@@ -23,7 +21,16 @@
 .ordered-item-desc {
   align-self: center;
 }
-
+.count-btn button{
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.count-btn input{
+  width: 20px;
+  text-align: center;
+  padding: 5px 10px;
+}
 .payment-section {
   width: 100%;
   align-self: center;
@@ -84,6 +91,18 @@
 }
 
 
+.empty-msg{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 0 0 0;
+  color: #023b2c;
+}
+.e-cart{
+  width: 100%;
+  font-size: 200px;
+  color: #023b2c;
+}
 @media screen and (max-width:1220px) {
 
     .ordered-item {

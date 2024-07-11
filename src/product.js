@@ -32,4 +32,5 @@ export const PRODUCTS = [
     productImage: prod4,
     description: "Organic Cotton, fairtrades certified",
   },
+
 ];

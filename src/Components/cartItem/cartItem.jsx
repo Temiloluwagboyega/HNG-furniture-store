@@ -1,8 +1,14 @@
-import React from "react";
-import "./cartitem.css";
+import React, { useContext } from "react";
+import {ShopContext} from '../../context/shop-context'
+
+
+
+
 export const CartItem = (props) => {
   const { id, productName, price, productImage, description } = props.data;
+  const { addToCart, cartItems, removeFromCart, updateCartCount } = useContext(ShopContext);
 
+  
   return (
     <div>
       <div className="ordered-item">
@@ -17,10 +23,20 @@ export const CartItem = (props) => {
           </p>
           <b>
             <br />
-            <h3>$ {price}</h3>
+            <h3>$ {price * cartItems[id]}</h3>
           </b>
+          <div className="count-btn">
+            <button onClick={() =>removeFromCart(id)}>-</button>
+            <input value={cartItems[id]} onChange= {(e) => updateCartCount(Number(e.target.value),id)}/>
+            <button onClick={() =>addToCart(id)}>+</button>
+          </div>
+          
         </div>
       </div>
     </div>
   );
 };
+
+
+
+export default CartItem
