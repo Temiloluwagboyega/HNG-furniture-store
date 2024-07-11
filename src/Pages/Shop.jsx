@@ -8,6 +8,7 @@ import Footer from "../Components/footer/footer";
 import { PRODUCTS } from "../product";
 import { Product } from "../Components/ProductItems/product";
 
+
 export const Shop = () => {
   return (
     <>

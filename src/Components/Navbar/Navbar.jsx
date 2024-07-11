@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import user from "../assets/user.svg";
 import cart from "../assets/shopping-cart.svg";
 import "./Navbar.css";
 import "../assets/css/all.min.css";
-import { FacebookLogo } from "phosphor-react";
+import {ShoppingCart} from "phosphor-react";
+import {ShopContext} from '../../context/shop-context'
+
 // import '../assets/css/min.css'
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { id, productName, price, productImage, description } = props.data;
+  const { addToCart, cartItems } = useContext(ShopContext);
+  const cartItemAmount = cartItems[id]
   const toggleMenu = () => {
     setIsOpen((open) => !open);
   };
@@ -70,7 +74,7 @@ export const Navbar = () => {
               >
                 <p>Cart</p>{" "}
                 <span>
-                  <img src={cart} alt="" />
+                <ShoppingCart size={20}/> {cartItemAmount > 0 && <sup> {cartItemAmount}  </sup>} 
                 </span>
               </Link>
             </div>

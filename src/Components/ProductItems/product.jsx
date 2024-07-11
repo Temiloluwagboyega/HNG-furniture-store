@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./items.css";
 import { ShopContext } from "../../context/shop-context";
 import { ShoppingCart } from "phosphor-react";
-
 export const Product = (props) => {
+  const[detail, setDetail] = useState();
   const { id, productName, price, productImage, description } = props.data;
   const { addToCart, cartItems } = useContext(ShopContext);
   const cartItemAmount = cartItems[id]
@@ -88,6 +88,7 @@ export const Product = (props) => {
               <button className="" onClick={() =>addToCart(id)} >
                 <ShoppingCart size={20}/> {cartItemAmount > 0 && <sup> {cartItemAmount}  </sup>} 
               </button>
+              
             </div>
           </div>
         </div>
